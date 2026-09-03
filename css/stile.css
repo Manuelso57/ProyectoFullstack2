@@ -5,6 +5,40 @@ body {
 h1, h2, h3 {
     font-family: 'Pacifico', cursive;
 }
+h1 {
+    font-size: 3rem;
+    color: #8B4513;
+}
+header {
+    background-color: #FFC0CB;
+    border-radius: 20px;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+}
+.logo {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+.enlaces {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+.menu {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.acciones {
+    display: flex;
+    gap: 15px;
+}
 .hero {
     display: flex;
     justify-content: center;
@@ -19,5 +53,14 @@ h1, h2, h3 {
 .hero-imagen img {
     max-width: 100%;
     height: auto;
+    border-radius: 20px;
 }
- 
+.boton {
+    display: inline-block;
+    background-color: #8B4513;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 10px;
+    margin-top: 15px;
+    text-decoration: none;
+}
