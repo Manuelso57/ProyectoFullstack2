@@ -20,8 +20,19 @@ nav {
     padding: 15px 30px;
 }
 .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
     font-weight: bold;
     font-size: 1.2rem;
+}
+.logo a {
+    text-decoration: none;
+    color: #8B4513;
+}
+.logo-imagen {
+    height: 40px;
+    width: auto;
 }
 .enlaces {
     display: flex;
@@ -33,11 +44,34 @@ nav {
     gap: 20px;
     list-style: none;
     margin: 0;
-    padding: 0;
+    padding: 8px 20px;
+    background-color: #FFF5E1;
+    border-radius: 20px;
+}
+.menu a {
+    text-decoration: none;
+    color: #8B4513;
+    padding-bottom: 4px;
+    border-bottom: 2px solid transparent;
+}
+.menu a:hover {
+    border-bottom: 2px solid #FFC0CB;
 }
 .acciones {
     display: flex;
     gap: 15px;
+    padding: 8px 20px;
+    background-color: #FFF5E1;
+    border-radius: 20px;
+}
+.acciones a {
+    text-decoration: none;
+    color: #8B4513;
+    padding-bottom: 4px;
+    border-bottom: 2px solid transparent;
+}
+.acciones a:hover {
+    border-bottom: 2px solid #FFC0CB;
 }
 .hero {
     display: flex;
