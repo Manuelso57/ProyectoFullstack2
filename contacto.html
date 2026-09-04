@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Pasteleria mil sabores</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/stile.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="imagenes/logo.png" alt="Logo Mil Sabores" class="logo-imagen">
+                <a href="index.html">Pastelería Mil Sabores</a>
+            </div>
+            <div class="enlaces">
+                <ul class="menu">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="productos.html">Productos</a></li>
+                    <li><a href="nosotros.html">Nosotros</a></li>
+                    <li><a href="blogs.html">Blogs</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+                <div class="acciones">
+                    <a href="login.html">Iniciar sesión</a>
+                    <a href="registro.html">Registrarse</a>
+                    <a href="carrito.html">Carrito (0)</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="seccion-titulo">
+            <h1>Contactanos</h1>
+            <p>Escríbenos para pedidos especiales o algunas dudas sobre productos.</p>
+        </section>
+
+        <section class="contenedor-formulario">
+            <form id="form-contacto">
+                <div class="campo">
+                    <label for="nombre">Nombre completo</label>
+                    <input type="text" id="nombre" name="nombre" maxlength="100">
+                </div>
+
+                <div class="campo">
+                    <label for="correo">Correo</label>
+                    <input type="email" id="correo" name="correo" maxlength="100" placeholder="nombre@duoc.cl">
+                </div>
+
+                <div class="campo">
+                    <textarea id="mensaje" name="mensaje" maxlength="500" placeholder="Escribe tu mensaje aquí"></textarea>
+                </div>
+
+                <button type="submit" class="boton">Enviar mensaje</button>
+            </form>
+        </section>
+    </main>
+    <footer class="pie-pagina pie-pagina--simple">
+        <p>Pastelería Mil Sabores</p>
+    </footer>
+</body>
+
+</html>

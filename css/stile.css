@@ -1,7 +1,13 @@
 body {
     margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
     background-color: #FFF5E1;
     font-family: 'Lato', sans-serif;
+}
+main {
+    flex: 1;
 }
 h1, h2, h3 {
     font-family: 'Pacifico', cursive;
@@ -162,4 +168,69 @@ nav {
 }
 .pie-columna a:hover {
     text-decoration: underline;
+}
+.detalle-blog {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+.detalle-blog p {
+    margin-bottom: 15px;
+}
+.seccion-titulo {
+    text-align: center;
+    padding: 40px 20px 20px 20px;
+}
+.lista-blogs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 20px 20px 50px 20px;
+}
+.tarjeta-blog {
+    background-color: #FFFDF9;
+    border-radius: 15px;
+    padding: 25px;
+    max-width: 500px;
+}
+.tarjeta-blog h2 {
+    font-size: 1.2rem;
+}
+.tarjeta-blog .boton {
+    margin-top: 10px;
+}
+.contenedor-formulario {
+    display: flex;
+    justify-content: center;
+    padding: 0 20px 50px 20px;
+}
+.contenedor-formulario form {
+    background-color: #F7E8C4;
+    border-radius: 15px;
+    padding: 30px;
+    max-width: 500px;
+    width: 100%;
+}
+.campo {
+    margin-bottom: 15px;
+}
+.campo label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+.campo input,
+.campo textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #c9ad93;
+    background-color: #FFF5E1;
+    color: #5D4037;
+    font-family: 'Lato', sans-serif;
+}
+.campo textarea {
+    min-height: 160px;
+    resize: vertical;
 }
