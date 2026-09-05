@@ -234,3 +234,11 @@ nav {
     min-height: 160px;
     resize: vertical;
 }
+.texto-ayuda {
+    text-align: center;
+    margin-top: 15px;
+}
+.texto-ayuda a {
+    color: #8B4513;
+    font-weight: bold;
+}
