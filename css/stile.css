@@ -347,7 +347,8 @@ nav {
     margin-bottom: 5px;
 }
 .campo input,
-.campo textarea {
+.campo textarea,
+.campo select {
     width: 100%;
     padding: 10px;
     border-radius: 8px;
@@ -356,9 +357,43 @@ nav {
     color: #5D4037;
     font-family: 'Lato', sans-serif;
 }
+.fila-doble {
+    display: flex;
+    gap: 15px;
+}
+.fila-doble .campo {
+    flex: 1;
+}
 .campo textarea {
     min-height: 160px;
     resize: vertical;
+}
+.error-mensaje {
+    color: #b33a3a;
+    font-size: 0.85rem;
+    margin-top: 4px;
+    min-height: 1em;
+}
+.campo--invalido input,
+.campo--invalido textarea {
+    border-color: #b33a3a;
+}
+.mensaje-formulario {
+    margin-top: 12px;
+    padding: 10px 14px;
+    border-radius: 8px;
+    font-weight: bold;
+    display: none;
+}
+.mensaje-formulario--ok {
+    display: block;
+    background-color: #E4F4E9;
+    color: #2f7a3d;
+}
+.mensaje-formulario--error {
+    display: block;
+    background-color: #FBE8E6;
+    color: #b33a3a;
 }
 .texto-ayuda {
     text-align: center;

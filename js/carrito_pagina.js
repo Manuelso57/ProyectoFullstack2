@@ -1,10 +1,25 @@
-let cupon_aplicado = null;
+const CODIGO_TORTA_CUMPLEANOS = "TE001";
+function calcularDescuentoActivo() {
+    const usuario = obtenerUsuarioActual();
+    return obtenerDescuentoUsuario(usuario);
+}
 function renderizar_carrito() {
     const carrito = obtener_carrito();
     const contenedor = document.getElementById("contenedor_carrito");
     if (carrito.length === 0) {
         contenedor.innerHTML = '<p class="carrito_vacio">Tu carrito está vacío. <a href="productos.html">Ver productos</a></p>';
         return;
+    }
+    const usuario = obtenerUsuarioActual();
+    const elegibleTortaGratis = usuario && esCorreoDuoc(usuario.correo) && esCumpleanosHoy(usuario.fechaNacimiento) && !yaReclamoTortaGratis(usuario);
+    const tieneTortaEnCarrito = carrito.some(item => item.codigo === CODIGO_TORTA_CUMPLEANOS);
+    let avisoCumpleanos = "";
+    if (elegibleTortaGratis) {
+        if (tieneTortaEnCarrito) {
+            avisoCumpleanos = '<p class="aviso_cumpleanos">🎂 ¡Feliz cumpleaños! Por ser estudiante Duoc, tu torta de cumpleaños va gratis. El descuento ya está aplicado en el total.</p>';
+        } else {
+            avisoCumpleanos = '<p class="aviso_cumpleanos">🎂 ¡Feliz cumpleaños! Por ser estudiante Duoc, tienes una torta de cumpleaños gratis. <button type="button" id="agregar_torta_gratis" class="boton_volver">Agregar torta gratis</button></p>';
+        }
     }
     let filas = "";
     carrito.forEach(item => {
@@ -24,22 +39,31 @@ function renderizar_carrito() {
             '</div>';
     });
     const subtotal = total_precio_carrito();
-    const descuento = cupon_aplicado ? Math.round(subtotal * 0.10) : 0;
-    const total = subtotal - descuento;
-    let resumen = '<div class="resumen_cupon">' +
-        '<input type="text" id="input_cupon" placeholder="Código de descuento" maxlength="20">' +
-        '<button type="button" id="aplicar_cupon" class="boton_volver">Aplicar</button>' +
-        '</div>' +
-        '<p id="mensaje_cupon" class="mensaje_cupon"></p>' +
-        '<div class="carrito_resumen">' +
+    const descuentoInfo = calcularDescuentoActivo();
+    const descuentoPorcentaje = Math.round(subtotal * descuentoInfo.porcentaje / 100);
+    let descuentoTorta = 0;
+    if (elegibleTortaGratis && tieneTortaEnCarrito) {
+        const productoTorta = productos.find(p => p.codigo === CODIGO_TORTA_CUMPLEANOS);
+        if (productoTorta) descuentoTorta = productoTorta.precio;
+    }
+    const totalDescuentos = descuentoPorcentaje + descuentoTorta;
+    const total = subtotal - totalDescuentos;
+    let resumen = "";
+    if (descuentoInfo.porcentaje > 0) {
+        resumen += '<p class="mensaje_cupon mensaje_cupon--ok">Descuento automático aplicado: ' + descuentoInfo.motivo + '</p>';
+    }
+    resumen += '<div class="carrito_resumen">' +
         '<div class="carrito_resumen__linea"><span>Subtotal</span><span>$' + subtotal.toLocaleString("es-CL") + '</span></div>';
-    if (cupon_aplicado) {
-        resumen += '<div class="carrito_resumen__linea"><span>Descuento (FELICES50, 10%)</span><span>-$' + descuento.toLocaleString("es-CL") + '</span></div>';
+    if (descuentoPorcentaje > 0) {
+        resumen += '<div class="carrito_resumen__linea"><span>Descuento (' + descuentoInfo.motivo + ', ' + descuentoInfo.porcentaje + '%)</span><span>-$' + descuentoPorcentaje.toLocaleString("es-CL") + '</span></div>';
+    }
+    if (descuentoTorta > 0) {
+        resumen += '<div class="carrito_resumen__linea"><span>Torta de cumpleaños gratis (Duoc)</span><span>-$' + descuentoTorta.toLocaleString("es-CL") + '</span></div>';
     }
     resumen += '<div class="carrito_resumen__linea carrito_resumen__total"><span>Total</span><span>$' + total.toLocaleString("es-CL") + '</span></div>' +
         '</div>' +
         '<button type="button" id="boton_comprar" class="boton">Comprar</button>';
-    contenedor.innerHTML = filas + resumen;
+    contenedor.innerHTML = avisoCumpleanos + filas + resumen;
     document.querySelectorAll("[data-restar]").forEach(boton => {
         boton.addEventListener("click", () => {
             const item = obtener_carrito().find(i => i.codigo === boton.dataset.restar);
@@ -66,24 +90,22 @@ function renderizar_carrito() {
             renderizar_carrito();
         });
     });
-    document.getElementById("aplicar_cupon").addEventListener("click", () => {
-        const codigo = document.getElementById("input_cupon").value.trim().toUpperCase();
-        const mensaje = document.getElementById("mensaje_cupon");
-        if (codigo === "FELICES50") {
-            cupon_aplicado = codigo;
-            mensaje.textContent = "Código aplicado: 10% de descuento.";
-            mensaje.className = "mensaje_cupon mensaje_cupon--ok";
-        } else {
-            cupon_aplicado = null;
-            mensaje.textContent = "Código no válido.";
-            mensaje.className = "mensaje_cupon mensaje_cupon--error";
-        }
-        renderizar_carrito();
-    });
+    const botonTortaGratis = document.getElementById("agregar_torta_gratis");
+    if (botonTortaGratis) {
+        botonTortaGratis.addEventListener("click", () => {
+            agregar_al_carrito(CODIGO_TORTA_CUMPLEANOS, 1);
+            renderizar_carrito();
+        });
+    }
     document.getElementById("boton_comprar").addEventListener("click", () => {
-        alert("¡Gracias por tu compra! Total pagado: $" + total.toLocaleString("es-CL"));
+        if (descuentoTorta > 0) {
+            marcarTortaGratisReclamada(usuario.correo);
+        }
+        const mensajeCompra = descuentoTorta > 0
+            ? "¡Gracias por tu compra! Regalo por ser de Duoc UC. Total pagado: $" + total.toLocaleString("es-CL")
+            : "¡Gracias por tu compra! Total pagado: $" + total.toLocaleString("es-CL");
+        alert(mensajeCompra);
         localStorage.removeItem("carrito_mil_sabores");
-        cupon_aplicado = null;
         actualizar_contador_carrito();
         renderizar_carrito();
     });

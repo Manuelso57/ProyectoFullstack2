@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nosotros - Pasteleria mil sabores</title>
+    <title>Blogs - Pasteleria mil sabores</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Lato:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/stile.css">
@@ -28,34 +28,35 @@
                 <div class="acciones">
                     <a href="login.html">Iniciar sesión</a>
                     <a href="registro.html">Registrarse</a>
-                    <a href="carrito.html">Carrito (0)</a>
+                    <a href="carrito.html">Carrito (<span id="contador_carrito">0</span>)</a>
                 </div>
             </div>
         </nav>
     </header>
     <main>
-        <section class="hero">
-            <div class="hero-texto hero-texto-ancho">
-                <h2>Que somos Pastelería mil sabores y que es lo que buscamos ofrecer.</h2>
-                <div class="descripcion-nosotros">
-                    <p>Pastelería 1000 Sabores celebra su 50 aniversario como un referente en la repostería chilena. Famosa por su participación en un récord Guinness en 1995, cuando colaboró en la creación de la torta más grande del mundo, la pastelería busca renovar su sistema de ventas online para ofrecer una experiencia de compra moderna y accesible para sus clientes.</p>
-                </div>
-                <div class="mision-vision">
-                    <div class="mision-vision__columna">
-                        <h2>Nuestra misión:</h2>
-                        <p>Nuestra misión es ofrecer una experiencia dulce y memorable a nuestros clientes, proporcionando tortas y productos de repostería de alta calidad para todas las ocasiones, mientras celebramos nuestras raíces históricas y fomentamos la creatividad en la repostería.</p>
-                    </div>
-                    <div class="mision-vision__columna">
-                        <h2>Nuestra visión:</h2>
-                        <p>Nuestra visión es convertirnos en la tienda online líder de productos de repostería en Chile, conocida por nuestra innovación, calidad y el impacto positivo en la comunidad, especialmente en la formación de nuevos talentos en gastronomía.</p>
-                    </div>
-                </div>
-            </div>
+        <section class="seccion-titulo">
+            <h1>Que somos pasteleria mil sabores</h1>
+        </section>
+
+        <section class="lista-blogs">
+            <article class="tarjeta-blog">
+                <h2>El día que hicimos historia con Guinness</h2>
+                <p>En 1995 Pastelería Mil Sabores participó en la creación de la torta más grande del mundo, un hito que hasta hoy es parte de nuestra historia.</p>
+                <a href="blog_detalle_1.html" class="boton">Ver más</a>
+            </article>
+
+            <article class="tarjeta-blog">
+                <h2>Sin gluten y sin azúcar: repostería para todos</h2>
+                <p>Descubre cómo desarrollamos nuestra línea de productos sin gluten y sin azúcar, pensada para que nadie se quede sin disfrutar un buen postre.</p>
+                <a href="blog_detalle_2.html" class="boton">Ver más</a>
+            </article>
         </section>
     </main>
     <footer class="pie-pagina pie-pagina--simple">
         <p>Pastelería Mil Sabores</p>
     </footer>
+    <script src="js/productos.js"></script>
+    <script src="js/carrito.js"></script>
 </body>
 
 </html>

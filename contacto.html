@@ -28,7 +28,7 @@
                 <div class="acciones">
                     <a href="login.html">Iniciar sesión</a>
                     <a href="registro.html">Registrarse</a>
-                    <a href="carrito.html">Carrito (0)</a>
+                    <a href="carrito.html">Carrito (<span id="contador_carrito">0</span>)</a>
                 </div>
             </div>
         </nav>
@@ -40,28 +40,36 @@
         </section>
 
         <section class="contenedor-formulario">
-            <form id="form-contacto">
+            <form id="form-contacto" novalidate>
                 <div class="campo">
                     <label for="nombre">Nombre completo</label>
                     <input type="text" id="nombre" name="nombre" maxlength="100">
+                    <p class="error-mensaje"></p>
                 </div>
 
                 <div class="campo">
                     <label for="correo">Correo</label>
                     <input type="email" id="correo" name="correo" maxlength="100" placeholder="nombre@duoc.cl">
+                    <p class="error-mensaje"></p>
                 </div>
 
                 <div class="campo">
                     <textarea id="mensaje" name="mensaje" maxlength="500" placeholder="Escribe tu mensaje aquí"></textarea>
+                    <p class="error-mensaje"></p>
                 </div>
 
                 <button type="submit" class="boton">Enviar mensaje</button>
+                <p class="mensaje-formulario" role="status"></p>
             </form>
         </section>
     </main>
     <footer class="pie-pagina pie-pagina--simple">
         <p>Pastelería Mil Sabores</p>
     </footer>
+    <script src="js/productos.js"></script>
+    <script src="js/carrito.js"></script>
+    <script src="js/validaciones.js"></script>
+    <script src="js/contacto_pagina.js"></script>
 </body>
 
 </html>
