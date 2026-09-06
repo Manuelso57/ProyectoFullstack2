@@ -28,7 +28,7 @@
                 <div class="acciones">
                     <a href="login.html">Iniciar sesión</a>
                     <a href="registro.html">Registrarse</a>
-                    <a href="carrito.html">Carrito (0)</a>
+                    <a href="carrito.html">Carrito (<span id="contador_carrito">0</span>)</a>
                 </div>
             </div>
         </nav>
@@ -45,7 +45,10 @@
                 <span class="tarjeta-producto__categoria">Tortas Cuadradas</span>
                 <h3>Torta Cuadrada de Chocolate</h3>
                 <span class="tarjeta-producto__precio">$45.000</span>
-                <a href="detalle-producto.html?codigo=TC001" class="boton">Añadir</a>
+                <div class="tarjeta-producto__acciones">
+                    <a href="detalle_producto.html?codigo=TC001" class="boton boton--secundario">Ver detalle</a>
+                    <button type="button" class="boton" data-codigo="TC001">Añadir</button>
+                </div>
             </article>
 
             <article class="tarjeta-producto">
@@ -53,7 +56,10 @@
                 <span class="tarjeta-producto__categoria">Tortas Cuadradas</span>
                 <h3>Torta Cuadrada de Frutas</h3>
                 <span class="tarjeta-producto__precio">$50.000</span>
-                <a href="detalle-producto.html?codigo=TC002" class="boton">Añadir</a>
+                <div class="tarjeta-producto__acciones">
+                    <a href="detalle_producto.html?codigo=TC002" class="boton boton--secundario">Ver detalle</a>
+                    <button type="button" class="boton" data-codigo="TC002">Añadir</button>
+                </div>
             </article>
 
             <article class="tarjeta-producto">
@@ -61,7 +67,10 @@
                 <span class="tarjeta-producto__categoria">Tortas Circulares</span>
                 <h3>Torta Circular de Vainilla</h3>
                 <span class="tarjeta-producto__precio">$40.000</span>
-                <a href="detalle-producto.html?codigo=TT001" class="boton">Añadir</a>
+                <div class="tarjeta-producto__acciones">
+                    <a href="detalle_producto.html?codigo=TT001" class="boton boton--secundario">Ver detalle</a>
+                    <button type="button" class="boton" data-codigo="TT001">Añadir</button>
+                </div>
             </article>
 
             <article class="tarjeta-producto">
@@ -69,7 +78,10 @@
                 <span class="tarjeta-producto__categoria">Tortas Circulares</span>
                 <h3>Torta Circular de Manjar</h3>
                 <span class="tarjeta-producto__precio">$42.000</span>
-                <a href="detalle-producto.html?codigo=TT002" class="boton">Añadir</a>
+                <div class="tarjeta-producto__acciones">
+                    <a href="detalle_producto.html?codigo=TT002" class="boton boton--secundario">Ver detalle</a>
+                    <button type="button" class="boton" data-codigo="TT002">Añadir</button>
+                </div>
             </article>
 
             <article class="tarjeta-producto">
@@ -77,7 +89,10 @@
                 <span class="tarjeta-producto__categoria">Postres Individuales</span>
                 <h3>Mousse de Chocolate</h3>
                 <span class="tarjeta-producto__precio">$5.000</span>
-                <a href="detalle-producto.html?codigo=PI001" class="boton">Añadir</a>
+                <div class="tarjeta-producto__acciones">
+                    <a href="detalle_producto.html?codigo=PI001" class="boton boton--secundario">Ver detalle</a>
+                    <button type="button" class="boton" data-codigo="PI001">Añadir</button>
+                </div>
             </article>
 
             <article class="tarjeta-producto">
@@ -85,7 +100,10 @@
                 <span class="tarjeta-producto__categoria">Postres Individuales</span>
                 <h3>Tiramisú Clásico</h3>
                 <span class="tarjeta-producto__precio">$5.500</span>
-                <a href="detalle-producto.html?codigo=PI002" class="boton">Añadir</a>
+                <div class="tarjeta-producto__acciones">
+                    <a href="detalle_producto.html?codigo=PI002" class="boton boton--secundario">Ver detalle</a>
+                    <button type="button" class="boton" data-codigo="PI002">Añadir</button>
+                </div>
             </article>
 
             <article class="tarjeta-producto">
@@ -93,7 +111,10 @@
                 <span class="tarjeta-producto__categoria">Productos Sin Azúcar</span>
                 <h3>Torta Sin Azúcar de Naranja</h3>
                 <span class="tarjeta-producto__precio">$48.000</span>
-                <a href="detalle-producto.html?codigo=PSA001" class="boton">Añadir</a>
+                <div class="tarjeta-producto__acciones">
+                    <a href="detalle_producto.html?codigo=PSA001" class="boton boton--secundario">Ver detalle</a>
+                    <button type="button" class="boton" data-codigo="PSA001">Añadir</button>
+                </div>
             </article>
 
             <article class="tarjeta-producto">
@@ -101,7 +122,10 @@
                 <span class="tarjeta-producto__categoria">Productos Sin Azúcar</span>
                 <h3>Cheesecake Sin Azúcar</h3>
                 <span class="tarjeta-producto__precio">$47.000</span>
-                <a href="detalle-producto.html?codigo=PSA002" class="boton">Añadir</a>
+                <div class="tarjeta-producto__acciones">
+                    <a href="detalle_producto.html?codigo=PSA002" class="boton boton--secundario">Ver detalle</a>
+                    <button type="button" class="boton" data-codigo="PSA002">Añadir</button>
+                </div>
             </article>
 
             <article class="tarjeta-producto">
@@ -109,7 +133,10 @@
                 <span class="tarjeta-producto__categoria">Pastelería Tradicional</span>
                 <h3>Empanada de Manzana</h3>
                 <span class="tarjeta-producto__precio">$3.000</span>
-                <a href="detalle-producto.html?codigo=PT001" class="boton">Añadir</a>
+                <div class="tarjeta-producto__acciones">
+                    <a href="detalle_producto.html?codigo=PT001" class="boton boton--secundario">Ver detalle</a>
+                    <button type="button" class="boton" data-codigo="PT001">Añadir</button>
+                </div>
             </article>
 
             <article class="tarjeta-producto">
@@ -117,7 +144,10 @@
                 <span class="tarjeta-producto__categoria">Pastelería Tradicional</span>
                 <h3>Tarta de Santiago</h3>
                 <span class="tarjeta-producto__precio">$6.000</span>
-                <a href="detalle-producto.html?codigo=PT002" class="boton">Añadir</a>
+                <div class="tarjeta-producto__acciones">
+                    <a href="detalle_producto.html?codigo=PT002" class="boton boton--secundario">Ver detalle</a>
+                    <button type="button" class="boton" data-codigo="PT002">Añadir</button>
+                </div>
             </article>
 
             <article class="tarjeta-producto">
@@ -125,7 +155,10 @@
                 <span class="tarjeta-producto__categoria">Productos Sin Gluten</span>
                 <h3>Brownie Sin Gluten</h3>
                 <span class="tarjeta-producto__precio">$4.000</span>
-                <a href="detalle-producto.html?codigo=PG001" class="boton">Añadir</a>
+                <div class="tarjeta-producto__acciones">
+                    <a href="detalle_producto.html?codigo=PG001" class="boton boton--secundario">Ver detalle</a>
+                    <button type="button" class="boton" data-codigo="PG001">Añadir</button>
+                </div>
             </article>
 
             <article class="tarjeta-producto">
@@ -133,7 +166,10 @@
                 <span class="tarjeta-producto__categoria">Productos Sin Gluten</span>
                 <h3>Pan Sin Gluten</h3>
                 <span class="tarjeta-producto__precio">$3.500</span>
-                <a href="detalle-producto.html?codigo=PG002" class="boton">Añadir</a>
+                <div class="tarjeta-producto__acciones">
+                    <a href="detalle_producto.html?codigo=PG002" class="boton boton--secundario">Ver detalle</a>
+                    <button type="button" class="boton" data-codigo="PG002">Añadir</button>
+                </div>
             </article>
 
             <article class="tarjeta-producto">
@@ -141,7 +177,10 @@
                 <span class="tarjeta-producto__categoria">Productos Vegana</span>
                 <h3>Torta Vegana de Chocolate</h3>
                 <span class="tarjeta-producto__precio">$50.000</span>
-                <a href="detalle-producto.html?codigo=PV001" class="boton">Añadir</a>
+                <div class="tarjeta-producto__acciones">
+                    <a href="detalle_producto.html?codigo=PV001" class="boton boton--secundario">Ver detalle</a>
+                    <button type="button" class="boton" data-codigo="PV001">Añadir</button>
+                </div>
             </article>
 
             <article class="tarjeta-producto">
@@ -149,7 +188,10 @@
                 <span class="tarjeta-producto__categoria">Productos Vegana</span>
                 <h3>Galletas Veganas de Avena</h3>
                 <span class="tarjeta-producto__precio">$4.500</span>
-                <a href="detalle-producto.html?codigo=PV002" class="boton">Añadir</a>
+                <div class="tarjeta-producto__acciones">
+                    <a href="detalle_producto.html?codigo=PV002" class="boton boton--secundario">Ver detalle</a>
+                    <button type="button" class="boton" data-codigo="PV002">Añadir</button>
+                </div>
             </article>
 
             <article class="tarjeta-producto">
@@ -157,7 +199,10 @@
                 <span class="tarjeta-producto__categoria">Tortas Especiales</span>
                 <h3>Torta Especial de Cumpleaños</h3>
                 <span class="tarjeta-producto__precio">$55.000</span>
-                <a href="detalle-producto.html?codigo=TE001" class="boton">Añadir</a>
+                <div class="tarjeta-producto__acciones">
+                    <a href="detalle_producto.html?codigo=TE001" class="boton boton--secundario">Ver detalle</a>
+                    <button type="button" class="boton" data-codigo="TE001">Añadir</button>
+                </div>
             </article>
 
             <article class="tarjeta-producto">
@@ -165,13 +210,19 @@
                 <span class="tarjeta-producto__categoria">Tortas Especiales</span>
                 <h3>Torta Especial de Boda</h3>
                 <span class="tarjeta-producto__precio">$60.000</span>
-                <a href="detalle-producto.html?codigo=TE002" class="boton">Añadir</a>
+                <div class="tarjeta-producto__acciones">
+                    <a href="detalle_producto.html?codigo=TE002" class="boton boton--secundario">Ver detalle</a>
+                    <button type="button" class="boton" data-codigo="TE002">Añadir</button>
+                </div>
             </article>
         </section>
     </main>
     <footer class="pie-pagina pie-pagina--simple">
         <p>Pastelería Mil Sabores</p>
     </footer>
+    <script src="js/productos.js"></script>
+    <script src="js/carrito.js"></script>
+    <script src="js/productos_pagina.js"></script>
 </body>
 
 </html>

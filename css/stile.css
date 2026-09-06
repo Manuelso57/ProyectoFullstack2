@@ -94,6 +94,10 @@ nav {
 .hero-texto {
     max-width: 400px;
 }
+.codigo_promocion{
+    max-width: 400px;
+    color: #8B4513;
+}
 .hero-texto-ancho {
     max-width: 900px;
 }
@@ -133,6 +137,129 @@ nav {
     padding: 12px 24px;
     border-radius: 10px;
     text-decoration: none;
+    border: none;
+    font-family: 'Lato', sans-serif;
+    font-size: 1rem;
+    cursor: pointer;
+}
+.boton--secundario {
+    background-color: transparent;
+    color: #8B4513;
+    border: 2px solid #8B4513;
+}
+.tarjeta-producto__acciones {
+    display: flex;
+    gap: 8px;
+    margin-top: 8px;
+}
+.tarjeta-producto .boton {
+    flex: 1;
+    padding: 8px 10px;
+    font-size: 0.85rem;
+    text-align: center;
+}
+.boton_volver {
+    display: inline-block;
+    background-color: transparent;
+    color: #8B4513;
+    border: 2px solid #8B4513;
+    padding: 12px 24px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-family: 'Lato', sans-serif;
+    font-size: 1rem;
+}
+.contenedor_carrito {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px 60px 20px;
+}
+.fila_carrito {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background-color: #FFFDF9;
+    border-radius: 15px;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+.fila_carrito img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.fila_carrito__nombre {
+    flex: 1;
+    font-weight: bold;
+}
+.fila_carrito__precio {
+    color: #8B4513;
+}
+.fila_carrito__subtotal {
+    font-weight: bold;
+    min-width: 90px;
+    text-align: right;
+}
+.fila_carrito__quitar {
+    background-color: transparent;
+    border: none;
+    color: #b33a3a;
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+}
+.resumen_cupon {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+.resumen_cupon input {
+    flex: 1;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #c9ad93;
+    background-color: #FFF5E1;
+    color: #5D4037;
+    font-family: 'Lato', sans-serif;
+}
+.mensaje_cupon {
+    font-size: 0.9rem;
+    margin-top: 8px;
+}
+.mensaje_cupon--ok {
+    color: #2f7a3d;
+}
+.mensaje_cupon--error {
+    color: #b33a3a;
+}
+.carrito_resumen {
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid #e3d4bc;
+}
+.carrito_resumen__linea {
+    display: flex;
+    justify-content: space-between;
+    padding: 4px 0;
+}
+.carrito_resumen__total {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #8B4513;
+}
+#boton_comprar {
+    display: block;
+    width: 100%;
+    margin-top: 15px;
+}
+.carrito_vacio {
+    text-align: center;
+    font-size: 1.1rem;
+}
+.carrito_vacio a {
+    color: #8B4513;
+    font-weight: bold;
 }
 .pie-pagina {
     background-color: #8B4513;
@@ -283,4 +410,65 @@ nav {
     display: block;
     font-weight: bold;
     margin-bottom: 10px;
+}
+.detalle-producto {
+    display: flex;
+    gap: 40px;
+    padding: 40px 20px 60px 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+    align-items: flex-start;
+}
+.detalle-producto__imagen {
+    background-color: #F7E8C4;
+    border-radius: 15px;
+    width: 380px;
+    height: 380px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+.detalle-producto__imagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.detalle-producto__categoria {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    color: #8B4513;
+    font-weight: bold;
+}
+.detalle-producto__precio {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #8B4513;
+    margin: 5px 0 15px 0;
+}
+.selector-cantidad {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 20px 0;
+}
+.selector-cantidad__boton {
+    background-color: #F7E8C4;
+    border: none;
+    border-radius: 8px;
+    width: 36px;
+    height: 36px;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+.selector-cantidad__valor {
+    width: 50px;
+    text-align: center;
+    padding: 8px;
+    border-radius: 8px;
+    border: 1px solid #c9ad93;
+    background-color: #FFF5E1;
+    color: #5D4037;
+    font-family: 'Lato', sans-serif;
 }
