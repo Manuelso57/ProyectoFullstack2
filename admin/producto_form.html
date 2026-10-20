@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="titulo-pagina">Nuevo producto - Administrador Pasteleria mil sabores</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/stile.css">
+</head>
+
+<body>
+    <div class="admin-layout">
+        <aside class="admin-sidebar">
+            <h3>Pastelería Mil Sabores</h3>
+            <a href="index.html">Home</a>
+            <a href="productos.html">Productos</a>
+            <a href="usuarios.html">Usuarios</a>
+            <a href="../index.html">Volver a la tienda</a>
+            <a href="#" id="cerrar_sesion">Cerrar sesión</a>
+        </aside>
+        <main class="admin-contenido">
+            <h1 id="titulo-formulario">Nuevo producto</h1>
+            <form id="form-producto" novalidate class="form-admin">
+                <div class="campo">
+                    <label for="codigo">Código producto</label>
+                    <input type="text" id="codigo" name="codigo" maxlength="20">
+                    <p class="error-mensaje"></p>
+                </div>
+
+                <div class="campo">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre" name="nombre" maxlength="100">
+                    <p class="error-mensaje"></p>
+                </div>
+
+                <div class="campo">
+                    <label for="descripcion">Descripción (opcional)</label>
+                    <textarea id="descripcion" name="descripcion" maxlength="500"></textarea>
+                    <p class="error-mensaje"></p>
+                </div>
+
+                <div class="campo">
+                    <label for="precio">Precio</label>
+                    <input type="number" id="precio" name="precio" min="0" step="0.01">
+                    <p class="error-mensaje"></p>
+                </div>
+
+                <div class="campo">
+                    <label for="stock">Stock</label>
+                    <input type="number" id="stock" name="stock" min="0" step="1">
+                    <p class="error-mensaje"></p>
+                </div>
+
+                <div class="campo">
+                    <label for="stock-critico">Stock crítico (opcional)</label>
+                    <input type="number" id="stock-critico" name="stock-critico" min="0" step="1">
+                    <p class="error-mensaje"></p>
+                </div>
+
+                <div class="campo">
+                    <label for="categoria">Categoría</label>
+                    <select id="categoria" name="categoria">
+                        <option value="">-- Seleccione la categoría --</option>
+                        <option value="Tortas Cuadradas">Tortas Cuadradas</option>
+                        <option value="Tortas Circulares">Tortas Circulares</option>
+                        <option value="Postres Individuales">Postres Individuales</option>
+                        <option value="Productos Sin Azúcar">Productos Sin Azúcar</option>
+                        <option value="Pastelería Tradicional">Pastelería Tradicional</option>
+                        <option value="Productos Sin Gluten">Productos Sin Gluten</option>
+                        <option value="Productos Vegana">Productos Vegana</option>
+                        <option value="Tortas Especiales">Tortas Especiales</option>
+                    </select>
+                    <p class="error-mensaje"></p>
+                </div>
+
+                <div class="campo">
+                    <label for="imagen">Imagen (opcional, ruta o URL)</label>
+                    <input type="text" id="imagen" name="imagen" maxlength="300" placeholder="imagenes/nombre.png">
+                    <p class="error-mensaje"></p>
+                </div>
+
+                <button type="submit" class="boton">Guardar producto</button>
+                <p class="mensaje-formulario" role="status"></p>
+            </form>
+        </main>
+    </div>
+    <script src="../js/productos.js"></script>
+    <script src="../js/sesion.js"></script>
+    <script src="../js/admin_acceso.js"></script>
+    <script src="../js/validaciones.js"></script>
+    <script src="../js/admin_cerrar_sesion.js"></script>
+    <script src="../js/admin_producto_form_pagina.js"></script>
+</body>
+
+</html>

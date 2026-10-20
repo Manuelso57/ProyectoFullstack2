@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administrador - Pasteleria mil sabores</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/stile.css">
+</head>
+
+<body>
+    <div class="admin-layout">
+        <aside class="admin-sidebar">
+            <h3>Pastelería Mil Sabores</h3>
+            <a href="index.html">Home</a>
+            <a href="productos.html">Productos</a>
+            <a href="usuarios.html">Usuarios</a>
+            <a href="../index.html">Volver a la tienda</a>
+            <a href="#" id="cerrar_sesion">Cerrar sesión</a>
+        </aside>
+        <main class="admin-contenido">
+            <h1>¡Hola Administrador!</h1>
+            <p>Bienvenido al panel de administración de Pastelería Mil Sabores.</p>
+            <div class="admin-tarjetas">
+                <div class="admin-tarjeta">
+                    <span class="admin-tarjeta__numero" id="conteo_productos">0</span>
+                    <span class="admin-tarjeta__etiqueta">Productos</span>
+                </div>
+                <div class="admin-tarjeta">
+                    <span class="admin-tarjeta__numero" id="conteo_usuarios">0</span>
+                    <span class="admin-tarjeta__etiqueta">Usuarios</span>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="../js/productos.js"></script>
+    <script src="../js/sesion.js"></script>
+    <script src="../js/admin_acceso.js"></script>
+    <script src="../js/admin_home_pagina.js"></script>
+</body>
+
+</html>

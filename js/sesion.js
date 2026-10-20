@@ -56,3 +56,23 @@ function marcarTortaGratisReclamada(correo) {
     usuarios[indice].tortaGratisAnio = new Date().getFullYear();
     guardarUsuarios(usuarios);
 }
+(function asegurarAdministradorDemo() {
+    const usuarios = obtenerUsuarios();
+    if (!usuarios.some(u => u.tipo === "Administrador")) {
+        usuarios.push({
+            nombre: "Admin",
+            apellidos: "Sistema",
+            run: "111111111",
+            correo: "admin@duoc.cl",
+            password: "admin123",
+            fechaNacimiento: "",
+            telefono: "",
+            region: "Región Metropolitana de Santiago",
+            comuna: "Santiago",
+            direccion: "Casa Matriz",
+            tipo: "Administrador",
+            codigoFelices50: false
+        });
+        guardarUsuarios(usuarios);
+    }
+})();
