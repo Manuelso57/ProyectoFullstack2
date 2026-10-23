@@ -53,7 +53,7 @@ function Carrito() {
                 <td>
                   <div className="selector-cantidad my-0">
                     <Button variant="light" className="selector-cantidad__boton" aria-label={"Restar " + producto.nombre} onClick={() => cambiarCantidad(producto.codigo, cantidad - 1)}>−</Button>
-                    <Form.Control type="number" min="1" value={cantidad} aria-label={"Cantidad " + producto.nombre} className="selector-cantidad__valor" onChange={(e) => cambiarCantidad(producto.codigo, parseInt(e.target.value) || 1)} />
+                    <Form.Control type="number" min="1" value={cantidad} aria-label={"Cantidad " + producto.nombre} className="selector-cantidad__valor" onFocus={(e) => e.target.select()} onChange={(e) => cambiarCantidad(producto.codigo, parseInt(e.target.value) || 1)} />
                     <Button variant="light" className="selector-cantidad__boton" aria-label={"Sumar " + producto.nombre} onClick={() => cambiarCantidad(producto.codigo, cantidad + 1)}>+</Button>
                   </div>
                 </td>

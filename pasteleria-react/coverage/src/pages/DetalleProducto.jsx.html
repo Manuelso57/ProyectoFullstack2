@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">94.73% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>0/18</span>
+                <span class='fraction'>18/19</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">90% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/10</span>
+                <span class='fraction'>9/10</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">88.88% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/8</span>
+                <span class='fraction'>8/9</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>0/15</span>
+                <span class='fraction'>15/15</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -131,31 +131,29 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">13x</span>
+<span class="cline-any cline-yes">13x</span>
+<span class="cline-any cline-yes">13x</span>
+<span class="cline-any cline-yes">13x</span>
+<span class="cline-any cline-yes">13x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">13x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -169,9 +167,11 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -190,15 +190,15 @@ import { useCarrito } from "../context/CarritoContext"
 import { obtenerProductoPorCodigo } from "../data/datos"
 import { formatearPrecio, precioFinal, estaEnOferta } from "../utils/formato"
 &nbsp;
-function <span class="fstat-no" title="function not covered" >DetalleProducto() {</span>
-  const { codigo } = <span class="cstat-no" title="statement not covered" >useParams()</span>
-  const producto = <span class="cstat-no" title="statement not covered" >obtenerProductoPorCodigo(codigo)</span>
-  const [cantidad, setCantidad] = <span class="cstat-no" title="statement not covered" >useState(1)</span>
-  const [agregado, setAgregado] = <span class="cstat-no" title="statement not covered" >useState(false)</span>
-  const { agregar } = <span class="cstat-no" title="statement not covered" >useCarrito()</span>
+function DetalleProducto() {
+  const { codigo } = useParams()
+  const producto = obtenerProductoPorCodigo(codigo)
+  const [cantidad, setCantidad] = useState(1)
+  const [agregado, setAgregado] = useState(false)
+  const { agregar } = useCarrito()
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  if (!producto) {</span>
-<span class="cstat-no" title="statement not covered" >    return (</span>
+  if (!producto) {
+    return (
       &lt;section className="seccion-titulo"&gt;
         &lt;h1&gt;Producto no encontrado&lt;/h1&gt;
         &lt;p&gt;Vuelve al catálogo e intenta de nuevo.&lt;/p&gt;
@@ -207,13 +207,13 @@ function <span class="fstat-no" title="function not covered" >DetalleProducto() 
     )
   }
 &nbsp;
-  const <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >añadir = () =&gt; {</span></span>
-<span class="cstat-no" title="statement not covered" >    agregar(producto.codigo, cantidad)</span>
-<span class="cstat-no" title="statement not covered" >    setAgregado(true)</span>
-<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >    setTimeout(() =&gt; <span class="cstat-no" title="statement not covered" >s</span>etAgregado(false), 1</span>200)</span>
+  const añadir = () =&gt; {
+    agregar(producto.codigo, cantidad)
+    setAgregado(true)
+<span class="fstat-no" title="function not covered" >    setTimeout(() =&gt; <span class="cstat-no" title="statement not covered" >s</span>etAgregado(false), 1</span>200)
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  return (</span>
+  return (
     &lt;section className="detalle-producto"&gt;
       &lt;div className="detalle-producto__imagen"&gt;
         &lt;img src={producto.imagen} alt={producto.nombre} /&gt;
@@ -229,9 +229,9 @@ function <span class="fstat-no" title="function not covered" >DetalleProducto() 
         &lt;p&gt;{producto.descripcion}&lt;/p&gt;
         &lt;p className="mb-0"&gt;Stock disponible: {producto.stock}&lt;/p&gt;
         &lt;Form.Group controlId="cantidad-detalle" className="selector-cantidad"&gt;
-          &lt;Button variant="light" className="selector-cantidad__boton" aria-label="Restar cantidad" <span class="fstat-no" title="function not covered" >onClick={() =&gt; <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >s</span>etCantidad((c</span>) =&gt; <span class="cstat-no" title="statement not covered" >Math.max(1, c - 1))</span>}&gt;−</span>&lt;/Button&gt;
-          &lt;Form.Control type="number" min="1" value={cantidad} aria-label="Cantidad" className="selector-cantidad__valor" <span class="fstat-no" title="function not covered" >onChange={(e</span>) =&gt; <span class="cstat-no" title="statement not covered" >setCantidad(Math.max(1, parseInt(e.target.value) || 1))} /&gt;</span>
-          &lt;Button variant="light" className="selector-cantidad__boton" aria-label="Sumar cantidad" <span class="fstat-no" title="function not covered" >onClick={() =&gt; <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >s</span>etCantidad((c</span>) =&gt; <span class="cstat-no" title="statement not covered" >c + 1)</span>}&gt;+</span>&lt;/Button&gt;
+          &lt;Button variant="light" className="selector-cantidad__boton" aria-label="Restar cantidad" onClick={() =&gt; setCantidad((c) =&gt; Math.max(1, c - 1))}&gt;−&lt;/Button&gt;
+          &lt;Form.Control type="number" min="1" value={cantidad} aria-label="Cantidad" className="selector-cantidad__valor" onFocus={(e) =&gt; e.target.select()} onChange={(e) =&gt; setCantidad(Math.max(1, parseInt(e.target.value) || <span class="branch-1 cbranch-no" title="branch not covered" >1)</span>)} /&gt;
+          &lt;Button variant="light" className="selector-cantidad__boton" aria-label="Sumar cantidad" onClick={() =&gt; setCantidad((c) =&gt; c + 1)}&gt;+&lt;/Button&gt;
         &lt;/Form.Group&gt;
         &lt;div className="d-flex flex-wrap gap-2"&gt;
           &lt;Button variant="primary" className="boton-grande" disabled={producto.stock &lt;= 0} onClick={añadir}&gt;{agregado ? "Añadido al carrito" : "Añadir al carrito"}&lt;/Button&gt;
@@ -250,7 +250,7 @@ export default DetalleProducto
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2026-10-23T05:59:54.602Z
+                at 2026-10-23T06:14:27.637Z
             </div>
         <script src="../../prettify.js"></script>
         <script>

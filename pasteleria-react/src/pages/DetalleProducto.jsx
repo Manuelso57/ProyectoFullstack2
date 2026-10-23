@@ -45,7 +45,7 @@ function DetalleProducto() {
         <p className="mb-0">Stock disponible: {producto.stock}</p>
         <Form.Group controlId="cantidad-detalle" className="selector-cantidad">
           <Button variant="light" className="selector-cantidad__boton" aria-label="Restar cantidad" onClick={() => setCantidad((c) => Math.max(1, c - 1))}>−</Button>
-          <Form.Control type="number" min="1" value={cantidad} aria-label="Cantidad" className="selector-cantidad__valor" onChange={(e) => setCantidad(Math.max(1, parseInt(e.target.value) || 1))} />
+          <Form.Control type="number" min="1" value={cantidad} aria-label="Cantidad" className="selector-cantidad__valor" onFocus={(e) => e.target.select()} onChange={(e) => setCantidad(Math.max(1, parseInt(e.target.value) || 1))} />
           <Button variant="light" className="selector-cantidad__boton" aria-label="Sumar cantidad" onClick={() => setCantidad((c) => c + 1)}>+</Button>
         </Form.Group>
         <div className="d-flex flex-wrap gap-2">

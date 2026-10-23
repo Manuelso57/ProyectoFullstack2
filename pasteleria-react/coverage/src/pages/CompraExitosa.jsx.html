@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>0/8</span>
+                <span class='fraction'>8/8</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/4</span>
+                <span class='fraction'>4/4</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/3</span>
+                <span class='fraction'>3/3</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>0/8</span>
+                <span class='fraction'>8/8</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -109,20 +109,12 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -130,8 +122,16 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -147,13 +147,13 @@ import { Alert, Button, Container } from "react-bootstrap"
 import DatosOrden from "../components/DatosOrden"
 import { obtenerOrdenPorNumero } from "../data/datos"
 &nbsp;
-function <span class="fstat-no" title="function not covered" >CompraExitosa() {</span>
-  const { numero } = <span class="cstat-no" title="statement not covered" >useParams()</span>
-  const orden = <span class="cstat-no" title="statement not covered" >obtenerOrdenPorNumero(numero)</span>
-  const [aviso, setAviso] = <span class="cstat-no" title="statement not covered" >useState("")</span>
+function CompraExitosa() {
+  const { numero } = useParams()
+  const orden = obtenerOrdenPorNumero(numero)
+  const [aviso, setAviso] = useState("")
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  if (!orden) {</span>
-<span class="cstat-no" title="statement not covered" >    return (</span>
+  if (!orden) {
+    return (
       &lt;section className="seccion-titulo"&gt;
         &lt;h1&gt;Orden no encontrada&lt;/h1&gt;
         &lt;Link to="/productos" className="btn btn-primary boton-grande"&gt;Ver productos&lt;/Link&gt;
@@ -161,7 +161,7 @@ function <span class="fstat-no" title="function not covered" >CompraExitosa() {<
     )
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  return (</span>
+  return (
     &lt;Container className="contenedor-carrito my-5"&gt;
       &lt;div className="formulario-tarjeta formulario-ancho"&gt;
         &lt;p className="text-end small mb-1"&gt;Código orden: {orden.codigo}&lt;/p&gt;
@@ -169,8 +169,8 @@ function <span class="fstat-no" title="function not covered" >CompraExitosa() {<
         &lt;p&gt;Gracias por tu compra. Este es el resumen de tu pedido.&lt;/p&gt;
         &lt;DatosOrden orden={orden} /&gt;
         &lt;div className="d-flex flex-wrap justify-content-center gap-2"&gt;
-          &lt;Button variant="danger" size="sm" <span class="fstat-no" title="function not covered" >onClick={() =&gt; <span class="cstat-no" title="statement not covered" >w</span>indow.print()}&gt;I</span>mprimir boleta en PDF&lt;/Button&gt;
-          &lt;Button variant="success" size="sm" <span class="fstat-no" title="function not covered" >onClick={() =&gt; <span class="cstat-no" title="statement not covered" >s</span>etAviso("Boleta enviada a " + orden.cliente.correo + " (simulado).")}&gt;E</span>nviar boleta por email&lt;/Button&gt;
+          &lt;Button variant="danger" size="sm" onClick={() =&gt; window.print()}&gt;Imprimir boleta en PDF&lt;/Button&gt;
+          &lt;Button variant="success" size="sm" onClick={() =&gt; setAviso("Boleta enviada a " + orden.cliente.correo + " (simulado).")}&gt;Enviar boleta por email&lt;/Button&gt;
           &lt;Link to="/productos" className="btn btn-outline-primary btn-sm"&gt;Seguir comprando&lt;/Link&gt;
         &lt;/div&gt;
         {aviso &amp;&amp; &lt;Alert variant="success" className="mt-3 mb-0" role="status"&gt;{aviso}&lt;/Alert&gt;}
@@ -187,7 +187,7 @@ export default CompraExitosa
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2026-10-23T05:59:54.602Z
+                at 2026-10-23T06:14:27.637Z
             </div>
         <script src="../../prettify.js"></script>
         <script>

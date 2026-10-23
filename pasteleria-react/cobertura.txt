@@ -6,88 +6,109 @@
 [1m[30m[46m RUN [49m[39m[22m [36mv5.0.5 [39m[90mC:/Users/manue/OneDrive/Escritorio/fullstack2/ProyectoFullstack2/pasteleria-react[39m
       [2mCoverage enabled with [22m[33mv8[39m
 
- [32mÔ£ô[39m src/components/TarjetaProducto.test.jsx [2m([22m[2m6 tests[22m[2m)[22m[33m 738[2mms[22m[39m
-   [32mÔ£ô[39m TarjetaProducto [2m(6)[22m
-     [33m[2mÔ£ô[22m[39m enlaza al detalle del producto con su c├│digo[33m 379[2mms[22m[39m
- [32mÔ£ô[39m src/pages/Carrito.test.jsx [2m([22m[2m7 tests[22m[2m)[22m[33m 1004[2mms[22m[39m
-   [32mÔ£ô[39m P├ígina Carrito [2m(7)[22m
-     [33m[2mÔ£ô[22m[39m suma una unidad al hacer clic en +[33m 545[2mms[22m[39m
- [32mÔ£ô[39m src/pages/Categorias.test.jsx [2m([22m[2m3 tests[22m[2m)[22m[33m 1322[2mms[22m[39m
-   [32mÔ£ô[39m P├ígina Categor├¡as [2m(3)[22m
-     [33m[2mÔ£ô[22m[39m muestra una secci├│n por cada una de las 8 categor├¡as[33m 1177[2mms[22m[39m
- [32mÔ£ô[39m src/admin/Acceso.test.jsx [2m([22m[2m7 tests[22m[2m)[22m[33m 1149[2mms[22m[39m
-   [32mÔ£ô[39m Acceso al panel de administraci├│n [2m(5)[22m
-     [33m[2mÔ£ô[22m[39m muestra el dashboard y todo el men├║ al administrador[33m 533[2mms[22m[39m
- [32mÔ£ô[39m src/pages/Productos.test.jsx [2m([22m[2m5 tests[22m[2m)[22m[33m 1721[2mms[22m[39m
+ [32mÔ£ô[39m src/pages/Home.test.jsx [2m([22m[2m3 tests[22m[2m)[22m[33m 1278[2mms[22m[39m
+   [32mÔ£ô[39m P├ígina Home [2m(3)[22m
+     [33m[2mÔ£ô[22m[39m muestra el t├¡tulo principal, el c├│digo FELICES50 y los accesos del hero[33m 906[2mms[22m[39m
+ [32mÔ£ô[39m src/admin/BoletaUsuarios.test.jsx [2m([22m[2m7 tests[22m[2m)[22m[33m 1151[2mms[22m[39m
+   [32mÔ£ô[39m Admin: boleta [2m(2)[22m
+     [33m[2mÔ£ô[22m[39m avisa si la boleta no existe[33m 401[2mms[22m[39m
+ [32mÔ£ô[39m src/components/MenuFooter.test.jsx [2m([22m[2m8 tests[22m[2m)[22m[33m 1272[2mms[22m[39m
+   [32mÔ£ô[39m Menu [2m(6)[22m
+     [33m[2mÔ£ô[22m[39m muestra los accesos de un visitante[33m 572[2mms[22m[39m
+ [32mÔ£ô[39m src/pages/DetalleProducto.test.jsx [2m([22m[2m6 tests[22m[2m)[22m[33m 1499[2mms[22m[39m
+   [32mÔ£ô[39m P├ígina DetalleProducto [2m(6)[22m
+     [33m[2mÔ£ô[22m[39m muestra los datos del producto pedido[33m 638[2mms[22m[39m
+     [33m[2mÔ£ô[22m[39m cambia la cantidad con los botones ÔêÆ y + y no baja de 1[33m 525[2mms[22m[39m
+ [32mÔ£ô[39m src/pages/Productos.test.jsx [2m([22m[2m5 tests[22m[2m)[22m[33m 1927[2mms[22m[39m
    [32mÔ£ô[39m P├ígina Productos [2m(5)[22m
-     [33m[2mÔ£ô[22m[39m renderiza los 16 productos del cat├ílogo[33m 697[2mms[22m[39m
-     [33m[2mÔ£ô[22m[39m filtra al escribir en el buscador (estado del formulario)[33m 525[2mms[22m[39m
- [32mÔ£ô[39m src/pages/Contacto.test.jsx [2m([22m[2m3 tests[22m[2m)[22m[33m 1919[2mms[22m[39m
+     [33m[2mÔ£ô[22m[39m renderiza los 16 productos del cat├ílogo[33m 928[2mms[22m[39m
+     [33m[2mÔ£ô[22m[39m filtra al escribir en el buscador (estado del formulario)[33m 484[2mms[22m[39m
+ [32mÔ£ô[39m src/pages/Contacto.test.jsx [2m([22m[2m3 tests[22m[2m)[22m[33m 1927[2mms[22m[39m
    [32mÔ£ô[39m P├ígina Contacto [2m(3)[22m
-     [33m[2mÔ£ô[22m[39m exige el nombre y el mensaje al enviar vac├¡o[33m 616[2mms[22m[39m
-     [33m[2mÔ£ô[22m[39m valida el dominio del correo en tiempo real[33m 369[2mms[22m[39m
-     [33m[2mÔ£ô[22m[39m env├¡a el mensaje y limpia el formulario[33m 927[2mms[22m[39m
- [32mÔ£ô[39m src/pages/Login.test.jsx [2m([22m[2m5 tests[22m[2m)[22m[33m 3277[2mms[22m[39m
+     [33m[2mÔ£ô[22m[39m exige el nombre y el mensaje al enviar vac├¡o[33m 565[2mms[22m[39m
+     [33m[2mÔ£ô[22m[39m valida el dominio del correo en tiempo real[33m 343[2mms[22m[39m
+     [33m[2mÔ£ô[22m[39m env├¡a el mensaje y limpia el formulario[33m 1013[2mms[22m[39m
+ [32mÔ£ô[39m src/pages/Login.test.jsx [2m([22m[2m5 tests[22m[2m)[22m[33m 3108[2mms[22m[39m
    [32mÔ£ô[39m P├ígina Login [2m(5)[22m
-     [33m[2mÔ£ô[22m[39m muestra un error en tiempo real si el correo no es de un dominio permitido[33m 881[2mms[22m[39m
-     [33m[2mÔ£ô[22m[39m no inicia sesi├│n con credenciales incorrectas[33m 819[2mms[22m[39m
-     [33m[2mÔ£ô[22m[39m lleva al panel de administraci├│n cuando entra un administrador[33m 841[2mms[22m[39m
-     [33m[2mÔ£ô[22m[39m lleva al inicio cuando entra un cliente[33m 560[2mms[22m[39m
- [32mÔ£ô[39m src/context/CarritoContext.test.jsx [2m([22m[2m4 tests[22m[2m)[22m[32m 66[2mms[22m[39m
- [32mÔ£ô[39m src/pages/Blogs.test.jsx [2m([22m[2m4 tests[22m[2m)[22m[33m 553[2mms[22m[39m
-   [32mÔ£ô[39m Blogs [2m(4)[22m
-     [33m[2mÔ£ô[22m[39m lista los dos blogs con un enlace a su detalle[33m 375[2mms[22m[39m
- [32mÔ£ô[39m src/utils/formato.test.js [2m([22m[2m4 tests[22m[2m)[22m[32m 37[2mms[22m[39m
- [32mÔ£ô[39m src/data/usuariosOrdenes.test.js [2m([22m[2m6 tests[22m[2m)[22m[32m 18[2mms[22m[39m
- [32mÔ£ô[39m src/pages/Registro.test.jsx [2m([22m[2m4 tests[22m[2m)[22m[33m 5125[2mms[22m[39m
+     [33m[2mÔ£ô[22m[39m muestra un error en tiempo real si el correo no es de un dominio permitido[33m 826[2mms[22m[39m
+     [33m[2mÔ£ô[22m[39m no inicia sesi├│n con credenciales incorrectas[33m 880[2mms[22m[39m
+     [33m[2mÔ£ô[22m[39m lleva al panel de administraci├│n cuando entra un administrador[33m 681[2mms[22m[39m
+     [33m[2mÔ£ô[22m[39m lleva al inicio cuando entra un cliente[33m 575[2mms[22m[39m
+ [32mÔ£ô[39m src/pages/Registro.test.jsx [2m([22m[2m4 tests[22m[2m)[22m[33m 4931[2mms[22m[39m
    [32mÔ£ô[39m P├ígina Registro [2m(4)[22m
-     [33m[2mÔ£ô[22m[39m valida el RUN mientras se escribe[33m 996[2mms[22m[39m
-     [33m[2mÔ£ô[22m[39m avisa cuando las contrase├▒as no coinciden[33m 453[2mms[22m[39m
-     [33m[2mÔ£ô[22m[39m registra al usuario, guarda el c├│digo FELICES50 y lo lleva al inicio[33m 3513[2mms[22m[39m
- [32mÔ£ô[39m src/pages/Ofertas.test.jsx [2m([22m[2m3 tests[22m[2m)[22m[33m 704[2mms[22m[39m
-   [32mÔ£ô[39m P├ígina Ofertas [2m(3)[22m
-     [33m[2mÔ£ô[22m[39m muestra solo las tortas de chocolate en oferta[33m 564[2mms[22m[39m
- [32mÔ£ô[39m src/pages/Nosotros.test.jsx [2m([22m[2m1 test[22m[2m)[22m[33m 587[2mms[22m[39m
-   [32mÔ£ô[39m P├ígina Nosotros [2m(1)[22m
-     [33m[2mÔ£ô[22m[39m presenta a la empresa con su misi├│n y su visi├│n[33m 578[2mms[22m[39m
- [32mÔ£ô[39m src/admin/Productos.test.jsx [2m([22m[2m12 tests[22m[2m)[22m[33m 5746[2mms[22m[39m
+     [33m[2mÔ£ô[22m[39m valida el RUN mientras se escribe[33m 849[2mms[22m[39m
+     [33m[2mÔ£ô[22m[39m avisa cuando las contrase├▒as no coinciden[33m 378[2mms[22m[39m
+     [33m[2mÔ£ô[22m[39m registra al usuario, guarda el c├│digo FELICES50 y lo lleva al inicio[33m 3482[2mms[22m[39m
+ [32mÔ£ô[39m src/admin/Productos.test.jsx [2m([22m[2m12 tests[22m[2m)[22m[33m 5595[2mms[22m[39m
    [32mÔ£ô[39m Admin: productos [2m(6)[22m
-     [33m[2mÔ£ô[22m[39m lista los 16 productos[33m 651[2mms[22m[39m
-     [33m[2mÔ£ô[22m[39m elimina un producto despu├®s de confirmar[33m 487[2mms[22m[39m
+     [33m[2mÔ£ô[22m[39m lista los 16 productos[33m 625[2mms[22m[39m
+     [33m[2mÔ£ô[22m[39m elimina un producto despu├®s de confirmar[33m 454[2mms[22m[39m
    [32mÔ£ô[39m Admin: formulario de producto [2m(6)[22m
-     [33m[2mÔ£ô[22m[39m valida stock entero y descuento m├íximo en tiempo real[33m 453[2mms[22m[39m
-     [33m[2mÔ£ô[22m[39m crea un producto nuevo y vuelve al listado[33m 1551[2mms[22m[39m
-     [33m[2mÔ£ô[22m[39m rechaza un c├│digo de producto repetido[33m 1318[2mms[22m[39m
-     [33m[2mÔ£ô[22m[39m carga los datos al editar y bloquea el c├│digo[33m 595[2mms[22m[39m
- [32mÔ£ô[39m src/utils/reportes.test.js [2m([22m[2m4 tests[22m[2m)[22m[32m 22[2mms[22m[39m
- [32mÔ£ô[39m src/pages/Checkout.test.jsx [2m([22m[2m4 tests[22m[2m)[22m[33m 6814[2mms[22m[39m
+     [33m[2mÔ£ô[22m[39m valida stock entero y descuento m├íximo en tiempo real[33m 442[2mms[22m[39m
+     [33m[2mÔ£ô[22m[39m crea un producto nuevo y vuelve al listado[33m 1544[2mms[22m[39m
+     [33m[2mÔ£ô[22m[39m rechaza un c├│digo de producto repetido[33m 1106[2mms[22m[39m
+     [33m[2mÔ£ô[22m[39m carga los datos al editar y bloquea el c├│digo[33m 537[2mms[22m[39m
+ [32mÔ£ô[39m src/pages/Carrito.test.jsx [2m([22m[2m7 tests[22m[2m)[22m[33m 937[2mms[22m[39m
+   [32mÔ£ô[39m P├ígina Carrito [2m(7)[22m
+     [33m[2mÔ£ô[22m[39m suma una unidad al hacer clic en +[33m 475[2mms[22m[39m
+ [32mÔ£ô[39m src/components/TarjetaProducto.test.jsx [2m([22m[2m6 tests[22m[2m)[22m[33m 679[2mms[22m[39m
+   [32mÔ£ô[39m TarjetaProducto [2m(6)[22m
+     [33m[2mÔ£ô[22m[39m enlaza al detalle del producto con su c├│digo[33m 334[2mms[22m[39m
+ [32mÔ£ô[39m src/pages/Categorias.test.jsx [2m([22m[2m3 tests[22m[2m)[22m[33m 1214[2mms[22m[39m
+   [32mÔ£ô[39m P├ígina Categor├¡as [2m(3)[22m
+     [33m[2mÔ£ô[22m[39m muestra una secci├│n por cada una de las 8 categor├¡as[33m 1033[2mms[22m[39m
+ [32mÔ£ô[39m src/pages/ResultadoCompra.test.jsx [2m([22m[2m6 tests[22m[2m)[22m[33m 853[2mms[22m[39m
+   [32mÔ£ô[39m P├ígina CompraExitosa [2m(4)[22m
+     [33m[2mÔ£ô[22m[39m muestra el n├║mero de orden, los datos del cliente y el total pagado[33m 435[2mms[22m[39m
+ [32mÔ£ô[39m src/pages/Checkout.test.jsx [2m([22m[2m4 tests[22m[2m)[22m[33m 6447[2mms[22m[39m
    [32mÔ£ô[39m P├ígina Checkout [2m(4)[22m
-     [33m[2mÔ£ô[22m[39m no procesa el pago si faltan datos obligatorios[33m 579[2mms[22m[39m
-     [33m[2mÔ£ô[22m[39m con pago aprobado crea la orden, descuenta stock y vac├¡a el carrito[33m 2918[2mms[22m[39m
-     [33m[2mÔ£ô[22m[39m con pago rechazado guarda la orden, conserva el carrito y no toca el stock[33m 3018[2mms[22m[39m
- [32mÔ£ô[39m src/utils/validaciones.test.js [2m([22m[2m8 tests[22m[2m)[22m[32m 11[2mms[22m[39m
- [32mÔ£ô[39m src/admin/UsuariosCategorias.test.jsx [2m([22m[2m15 tests[22m[2m)[22m[33m 7291[2mms[22m[39m
+     [33m[2mÔ£ô[22m[39m rellena los datos autom├íticamente cuando hay una sesi├│n iniciada[33m 302[2mms[22m[39m
+     [33m[2mÔ£ô[22m[39m no procesa el pago si faltan datos obligatorios[33m 462[2mms[22m[39m
+     [33m[2mÔ£ô[22m[39m con pago aprobado crea la orden, descuenta stock y vac├¡a el carrito[33m 2710[2mms[22m[39m
+     [33m[2mÔ£ô[22m[39m con pago rechazado guarda la orden, conserva el carrito y no toca el stock[33m 2966[2mms[22m[39m
+ [32mÔ£ô[39m src/App.test.jsx [2m([22m[2m5 tests[22m[2m)[22m[33m 1164[2mms[22m[39m
+   [32mÔ£ô[39m App (rutas) [2m(5)[22m
+     [33m[2mÔ£ô[22m[39m muestra el inicio de la tienda con su men├║[33m 644[2mms[22m[39m
+ [32mÔ£ô[39m src/admin/Acceso.test.jsx [2m([22m[2m7 tests[22m[2m)[22m[33m 1168[2mms[22m[39m
+   [32mÔ£ô[39m Acceso al panel de administraci├│n [2m(5)[22m
+     [33m[2mÔ£ô[22m[39m muestra el dashboard y todo el men├║ al administrador[33m 514[2mms[22m[39m
+ [32mÔ£ô[39m src/pages/Blogs.test.jsx [2m([22m[2m4 tests[22m[2m)[22m[33m 658[2mms[22m[39m
+   [32mÔ£ô[39m Blogs [2m(4)[22m
+     [33m[2mÔ£ô[22m[39m lista los dos blogs con un enlace a su detalle[33m 445[2mms[22m[39m
+ [32mÔ£ô[39m src/admin/UsuariosCategorias.test.jsx [2m([22m[2m15 tests[22m[2m)[22m[33m 7130[2mms[22m[39m
    [32mÔ£ô[39m Admin: categor├¡as [2m(5)[22m
-     [33m[2mÔ£ô[22m[39m lista las 8 categor├¡as con su cantidad de productos[33m 483[2mms[22m[39m
-     [33m[2mÔ£ô[22m[39m crea una categor├¡a nueva[33m 554[2mms[22m[39m
-     [33m[2mÔ£ô[22m[39m rechaza una categor├¡a repetida[33m 558[2mms[22m[39m
-     [33m[2mÔ£ô[22m[39m renombra una categor├¡a y actualiza sus productos[33m 716[2mms[22m[39m
+     [33m[2mÔ£ô[22m[39m lista las 8 categor├¡as con su cantidad de productos[33m 549[2mms[22m[39m
+     [33m[2mÔ£ô[22m[39m crea una categor├¡a nueva[33m 520[2mms[22m[39m
+     [33m[2mÔ£ô[22m[39m rechaza una categor├¡a repetida[33m 493[2mms[22m[39m
+     [33m[2mÔ£ô[22m[39m renombra una categor├¡a y actualiza sus productos[33m 686[2mms[22m[39m
    [32mÔ£ô[39m Admin: usuarios [2m(7)[22m
-     [33m[2mÔ£ô[22m[39m valida el RUN al crear un usuario[33m 333[2mms[22m[39m
-     [33m[2mÔ£ô[22m[39m crea un usuario administrador[33m 3203[2mms[22m[39m
-     [33m[2mÔ£ô[22m[39m cambia el tipo de un usuario al editarlo y bloquea el correo[33m 318[2mms[22m[39m
+     [33m[2mÔ£ô[22m[39m valida el RUN al crear un usuario[33m 306[2mms[22m[39m
+     [33m[2mÔ£ô[22m[39m crea un usuario administrador[33m 2926[2mms[22m[39m
+     [33m[2mÔ£ô[22m[39m cambia el tipo de un usuario al editarlo y bloquea el correo[33m 363[2mms[22m[39m
    [32mÔ£ô[39m Admin: reportes y perfil [2m(3)[22m
-     [33m[2mÔ£ô[22m[39m actualiza el perfil del administrador[33m 428[2mms[22m[39m
- [32mÔ£ô[39m src/data/categorias.test.js [2m([22m[2m4 tests[22m[2m)[22m[32m 10[2mms[22m[39m
- [32mÔ£ô[39m src/utils/descuentos.test.js [2m([22m[2m9 tests[22m[2m)[22m[32m 10[2mms[22m[39m
- [32mÔ£ô[39m src/data/datos.test.js [2m([22m[2m7 tests[22m[2m)[22m[32m 10[2mms[22m[39m
+     [33m[2mÔ£ô[22m[39m actualiza el perfil del administrador[33m 652[2mms[22m[39m
+ [32mÔ£ô[39m src/data/usuariosOrdenes.test.js [2m([22m[2m6 tests[22m[2m)[22m[32m 18[2mms[22m[39m
+ [32mÔ£ô[39m src/pages/Ofertas.test.jsx [2m([22m[2m3 tests[22m[2m)[22m[33m 669[2mms[22m[39m
+   [32mÔ£ô[39m P├ígina Ofertas [2m(3)[22m
+     [33m[2mÔ£ô[22m[39m muestra solo las tortas de chocolate en oferta[33m 586[2mms[22m[39m
+ [32mÔ£ô[39m src/context/CarritoContext.test.jsx [2m([22m[2m4 tests[22m[2m)[22m[32m 132[2mms[22m[39m
+ [32mÔ£ô[39m src/servicios/pago.test.js [2m([22m[2m3 tests[22m[2m)[22m[32m 27[2mms[22m[39m
+ [32mÔ£ô[39m src/utils/formato.test.js [2m([22m[2m4 tests[22m[2m)[22m[32m 41[2mms[22m[39m
+ [32mÔ£ô[39m src/data/categorias.test.js [2m([22m[2m4 tests[22m[2m)[22m[32m 18[2mms[22m[39m
+ [32mÔ£ô[39m src/utils/reportes.test.js [2m([22m[2m4 tests[22m[2m)[22m[32m 19[2mms[22m[39m
+ [32mÔ£ô[39m src/utils/descuentos.test.js [2m([22m[2m9 tests[22m[2m)[22m[32m 16[2mms[22m[39m
+ [32mÔ£ô[39m src/pages/Nosotros.test.jsx [2m([22m[2m1 test[22m[2m)[22m[33m 526[2mms[22m[39m
+   [32mÔ£ô[39m P├ígina Nosotros [2m(1)[22m
+     [33m[2mÔ£ô[22m[39m presenta a la empresa con su misi├│n y su visi├│n[33m 520[2mms[22m[39m
+ [32mÔ£ô[39m src/utils/validaciones.test.js [2m([22m[2m8 tests[22m[2m)[22m[32m 8[2mms[22m[39m
+ [32mÔ£ô[39m src/data/datos.test.js [2m([22m[2m7 tests[22m[2m)[22m[32m 12[2mms[22m[39m
 
-[2m Test Files [22m [1m[32m22 passed[39m[22m[90m (22)[39m
-[2m      Tests [22m [1m[32m125 passed[39m[22m[90m (125)[39m
-[2m   Start at [22m 01:59:42
-[2m   Duration [22m 12.10s[2m (environment 41%, tests 35%, import 13%, setup 9%, worker 2%, transform 1%)[22m
+[2m Test Files [22m [1m[32m29 passed[39m[22m[90m (29)[39m
+[2m      Tests [22m [1m[32m163 passed[39m[22m[90m (163)[39m
+[2m   Start at [22m 02:14:12
+[2m   Duration [22m 15.24s[2m (environment 42%, tests 30%, import 15%, setup 10%, worker 2%, transform 1%)[22m
 
-[2mEnvironment [22m [33mjsdom was created 22 times[39m[2m ┬À 44.37s total, 41% of tracked time[22m
+[2mEnvironment [22m [33mjsdom was created 29 times[39m[2m ┬À 61.99s total, 42% of tracked time[22m
 [2m            [22m [2mcreate it once per worker with [22m[33mpool: 'vmThreads'[39m[2m (keeps per-file isolation) or [22m[33misolate: false[39m[2m (shares it across files)[22m
 [2m            [22m [2mlearn more: https://vitest.dev/guide/improving-performance#test-environments[22m
 
@@ -95,63 +116,62 @@
 -------------------|---------|----------|---------|---------|-------------------
 File               | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
 -------------------|---------|----------|---------|---------|-------------------
-All files          |   86.48 |    84.78 |   86.74 |    87.2 |                   
- src               |       0 |      100 |       0 |       0 |                   
-  App.jsx          |       0 |      100 |       0 |       0 | 6                 
-  Tienda.jsx       |       0 |      100 |       0 |       0 | 22                
-  setupTest.js     |       0 |        0 |       0 |       0 |                   
- src/admin         |   88.82 |    89.54 |   96.07 |   90.12 |                   
+All files          |   95.09 |    90.66 |   97.21 |   96.91 |                   
+ src               |     100 |      100 |     100 |     100 |                   
+  App.jsx          |     100 |      100 |     100 |     100 |                   
+  Tienda.jsx       |     100 |      100 |     100 |     100 |                   
+ src/admin         |   94.97 |    93.46 |     100 |   96.29 |                   
   Admin.jsx        |     100 |      100 |     100 |     100 |                   
   AdminLayout.jsx  |     100 |      100 |     100 |     100 |                   
-  Boleta.jsx       |   66.66 |       50 |      50 |   66.66 | 11,27             
+  Boleta.jsx       |     100 |      100 |     100 |     100 |                   
   ...goriaForm.jsx |   94.73 |       95 |     100 |     100 | 29                
   Categorias.jsx   |   93.33 |    66.66 |     100 |     100 | 13-15             
   Dashboard.jsx    |     100 |      100 |     100 |     100 |                   
-  ...alCompras.jsx |    87.5 |    66.66 |     100 |   85.71 | 11                
+  ...alCompras.jsx |     100 |    83.33 |     100 |     100 | 37                
   Ordenes.jsx      |     100 |       75 |     100 |     100 | 25                
-  Perfil.jsx       |   86.66 |    83.33 |     100 |   85.71 | 34-35             
+  Perfil.jsx       |     100 |      100 |     100 |     100 |                   
   ProductoForm.jsx |     100 |      100 |     100 |     100 |                   
   Productos.jsx    |     100 |      100 |     100 |     100 |                   
   ...sCriticos.jsx |     100 |      100 |     100 |     100 |                   
   Reportes.jsx     |     100 |      100 |     100 |     100 |                   
   ...Protegida.jsx |     100 |      100 |     100 |     100 |                   
-  UsuarioForm.jsx  |   77.41 |    88.63 |     100 |      75 | ...57,72-73,80-81 
-  Usuarios.jsx     |    64.7 |       50 |      80 |   73.33 | 18-21             
- src/components    |   39.13 |     62.5 |   63.63 |   39.13 |                   
+  UsuarioForm.jsx  |   80.64 |     90.9 |     100 |   78.57 | 56-57,72-73,80-81 
+  Usuarios.jsx     |   94.11 |    83.33 |     100 |     100 | 18                
+ src/components    |     100 |      100 |     100 |     100 |                   
   ...ormulario.jsx |     100 |      100 |     100 |     100 |                   
   DatosOrden.jsx   |     100 |      100 |     100 |     100 |                   
-  Footer.jsx       |       0 |        0 |       0 |       0 | 4-14              
-  Menu.jsx         |       0 |        0 |       0 |       0 | 8-35              
+  Footer.jsx       |     100 |      100 |     100 |     100 |                   
+  Menu.jsx         |     100 |      100 |     100 |     100 |                   
   ...enTotales.jsx |     100 |      100 |     100 |     100 |                   
   TablaItems.jsx   |     100 |      100 |     100 |     100 |                   
   ...aProducto.jsx |     100 |      100 |     100 |     100 |                   
  src/context       |   95.94 |       76 |     100 |   98.27 |                   
   ...toContext.jsx |   95.23 |    73.33 |     100 |   96.87 | 13                
   ...onContext.jsx |   96.87 |       80 |     100 |     100 | 26-46             
- src/data          |   93.22 |    82.08 |   96.36 |   96.45 |                   
+ src/data          |   93.22 |    83.58 |   96.36 |   96.45 |                   
   blogs.js         |     100 |      100 |     100 |     100 |                   
-  datos.js         |   93.01 |    81.53 |   96.15 |   96.37 | 33,55,125,143,194 
+  datos.js         |   93.01 |    83.07 |   96.15 |   96.37 | 33,55,125,143,194 
  src/hooks         |   96.66 |       75 |     100 |     100 |                   
   useFormulario.js |   96.66 |       75 |     100 |     100 | 15-30             
- src/pages         |   72.67 |    73.73 |   67.74 |   73.56 |                   
+ src/pages         |   94.05 |    89.89 |   92.18 |   94.82 |                   
   BlogDetalle.jsx  |     100 |      100 |     100 |     100 |                   
   Blogs.jsx        |     100 |      100 |     100 |     100 |                   
-  Carrito.jsx      |      80 |       75 |   66.66 |      80 | 39,55-56          
+  Carrito.jsx      |      75 |       75 |      60 |      80 | 39,55-56          
   Categorias.jsx   |     100 |     90.9 |     100 |     100 | 26                
   Checkout.jsx     |   94.59 |       90 |     100 |   94.44 | 85-86             
-  ...raExitosa.jsx |       0 |        0 |       0 |       0 | 8-30              
+  ...raExitosa.jsx |     100 |      100 |     100 |     100 |                   
   Contacto.jsx     |     100 |      100 |     100 |     100 |                   
-  ...eProducto.jsx |       0 |        0 |       0 |       0 | 9-49              
-  ...struccion.jsx |       0 |      100 |       0 |       0 | 4                 
-  Home.jsx         |       0 |        0 |       0 |       0 | 7-51              
+  ...eProducto.jsx |   94.73 |       90 |   88.88 |     100 | 48                
+  ...struccion.jsx |     100 |      100 |     100 |     100 |                   
+  Home.jsx         |     100 |       50 |     100 |     100 | 39                
   Login.jsx        |    87.5 |     87.5 |     100 |    87.5 | 22-23             
   Nosotros.jsx     |     100 |      100 |     100 |     100 |                   
   Ofertas.jsx      |     100 |      100 |     100 |     100 |                   
-  PagoError.jsx    |       0 |        0 |       0 |       0 | 7-19              
+  PagoError.jsx    |     100 |      100 |     100 |     100 |                   
   Productos.jsx    |     100 |      100 |     100 |     100 |                   
   Registro.jsx     |   89.47 |    83.33 |     100 |   88.88 | 54-55             
- src/servicios     |       0 |      100 |       0 |       0 |                   
-  pago.js          |       0 |      100 |       0 |       0 | 1-3               
+ src/servicios     |     100 |      100 |     100 |     100 |                   
+  pago.js          |     100 |      100 |     100 |     100 |                   
  src/utils         |   97.63 |     94.4 |     100 |     100 |                   
   descuentos.js    |    97.5 |    97.05 |     100 |     100 | 19                
   formato.js       |     100 |      100 |     100 |     100 |                   

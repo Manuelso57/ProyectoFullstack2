@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>0/10</span>
+                <span class='fraction'>10/10</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/4</span>
+                <span class='fraction'>4/4</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/3</span>
+                <span class='fraction'>3/3</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>0/10</span>
+                <span class='fraction'>10/10</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -137,19 +137,17 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">12x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -164,7 +162,9 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">96x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -203,18 +203,18 @@ import { useCarrito } from "../context/CarritoContext"
 import { useSesion } from "../context/SesionContext"
 import { obtenerCategorias } from "../data/datos"
 &nbsp;
-function <span class="fstat-no" title="function not covered" >Menu() {</span>
-  const { totalItems } = <span class="cstat-no" title="statement not covered" >useCarrito()</span>
-  const { usuario, cerrarSesion } = <span class="cstat-no" title="statement not covered" >useSesion()</span>
-  const navegar = <span class="cstat-no" title="statement not covered" >useNavigate()</span>
-  const <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >salir = (e</span>vento) =&gt; {</span>
-<span class="cstat-no" title="statement not covered" >    evento.preventDefault()</span>
-<span class="cstat-no" title="statement not covered" >    cerrarSesion()</span>
-<span class="cstat-no" title="statement not covered" >    navegar("/")</span>
+function Menu() {
+  const { totalItems } = useCarrito()
+  const { usuario, cerrarSesion } = useSesion()
+  const navegar = useNavigate()
+  const salir = (evento) =&gt; {
+    evento.preventDefault()
+    cerrarSesion()
+    navegar("/")
   }
-  const categorias = <span class="cstat-no" title="statement not covered" >obtenerCategorias()</span>
+  const categorias = obtenerCategorias()
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  return (</span>
+  return (
     &lt;header className="encabezado"&gt;
       &lt;Navbar expand="xl" className="barra" collapseOnSelect&gt;
         &lt;Navbar.Brand as={Link} to="/" className="logo"&gt;
@@ -230,8 +230,8 @@ function <span class="fstat-no" title="function not covered" >Menu() {</span>
               &lt;NavDropdown title="Categorías" id="menu-categorias"&gt;
                 &lt;NavDropdown.Item as={Link} to="/categorias"&gt;Todas las categorías&lt;/NavDropdown.Item&gt;
                 &lt;NavDropdown.Divider /&gt;
-                {categorias.<span class="fstat-no" title="function not covered" >map((c</span>ategoria) =&gt; (
-<span class="cstat-no" title="statement not covered" >                  &lt;NavDropdown.Item key={categoria} as={Link} to={"/categorias/" + encodeURIComponent(categoria)}&gt;</span>
+                {categorias.map((categoria) =&gt; (
+                  &lt;NavDropdown.Item key={categoria} as={Link} to={"/categorias/" + encodeURIComponent(categoria)}&gt;
                     {categoria}
                   &lt;/NavDropdown.Item&gt;
                 ))}
@@ -271,7 +271,7 @@ export default Menu
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2026-10-23T05:59:54.602Z
+                at 2026-10-23T06:14:27.637Z
             </div>
         <script src="../../prettify.js"></script>
         <script>

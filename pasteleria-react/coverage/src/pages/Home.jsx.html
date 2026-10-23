@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>0/9</span>
+                <span class='fraction'>9/9</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">50% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/2</span>
+                <span class='fraction'>1/2</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/4</span>
+                <span class='fraction'>4/4</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>0/8</span>
+                <span class='fraction'>8/8</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -127,14 +127,12 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -155,8 +153,10 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">320x</span>
+<span class="cline-any cline-yes">40x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -171,7 +171,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">20x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -184,13 +184,13 @@ import TarjetaProducto from "../components/TarjetaProducto"
 import { useCarrito } from "../context/CarritoContext"
 import { obtenerProductos, obtenerCategorias } from "../data/datos"
 &nbsp;
-function <span class="fstat-no" title="function not covered" >Home() {</span>
-  const { agregar } = <span class="cstat-no" title="statement not covered" >useCarrito()</span>
-  const productos = <span class="cstat-no" title="statement not covered" >obtenerProductos()</span>
-  const categorias = <span class="cstat-no" title="statement not covered" >obtenerCategorias()</span>
-  const destacados = <span class="cstat-no" title="statement not covered" >productos.slice(0, 4)</span>
+function Home() {
+  const { agregar } = useCarrito()
+  const productos = obtenerProductos()
+  const categorias = obtenerCategorias()
+  const destacados = productos.slice(0, 4)
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  return (</span>
+  return (
     &lt;&gt;
       &lt;section className="hero d-flex flex-column flex-md-row justify-content-center align-items-center gap-4 gap-md-5 text-center py-5 px-3"&gt;
         &lt;div className="hero-texto"&gt;
@@ -212,12 +212,12 @@ function <span class="fstat-no" title="function not covered" >Home() {</span>
         &lt;h2&gt;Categorías&lt;/h2&gt;
       &lt;/section&gt;
       &lt;section className="grilla-productos"&gt;
-        {categorias.<span class="fstat-no" title="function not covered" >map((c</span>ategoria) =&gt; {
-          const ejemplo = <span class="cstat-no" title="statement not covered" >productos.<span class="fstat-no" title="function not covered" >find((p</span>) =&gt; <span class="cstat-no" title="statement not covered" >p.categoria === categoria)</span></span>
-<span class="cstat-no" title="statement not covered" >          return (</span>
+        {categorias.map((categoria) =&gt; {
+          const ejemplo = productos.find((p) =&gt; p.categoria === categoria)
+          return (
             &lt;Link key={categoria} to={"/categorias/" + encodeURIComponent(categoria)} className="tarjeta-producto text-decoration-none"&gt;
               &lt;span className="tarjeta-producto__imagen"&gt;
-                &lt;img src={ejemplo ? ejemplo.imagen : "/imagenes/logo.png"} alt={categoria} /&gt;
+                &lt;img src={ejemplo ? ejemplo.imagen : <span class="branch-1 cbranch-no" title="branch not covered" >"/imagenes/logo.png"} a</span>lt={categoria} /&gt;
               &lt;/span&gt;
               &lt;h3&gt;{categoria}&lt;/h3&gt;
             &lt;/Link&gt;
@@ -228,8 +228,8 @@ function <span class="fstat-no" title="function not covered" >Home() {</span>
         &lt;h2&gt;Destacados&lt;/h2&gt;
       &lt;/section&gt;
       &lt;section className="grilla-productos"&gt;
-        {destacados.<span class="fstat-no" title="function not covered" >map((p</span>roducto) =&gt; (
-<span class="cstat-no" title="statement not covered" >          &lt;TarjetaProducto key={producto.codigo} producto={producto} onAgregar={agregar} /&gt;</span>
+        {destacados.map((producto) =&gt; (
+          &lt;TarjetaProducto key={producto.codigo} producto={producto} onAgregar={agregar} /&gt;
         ))}
       &lt;/section&gt;
     &lt;/&gt;
@@ -244,7 +244,7 @@ export default Home
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2026-10-23T05:59:54.602Z
+                at 2026-10-23T06:14:27.637Z
             </div>
         <script src="../../prettify.js"></script>
         <script>
